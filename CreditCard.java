@@ -14,9 +14,9 @@ public class CreditCard {
     //Return True if the card number is valid 
     public static boolean isValid(long number){
         boolean valid =
-        //(getSize(number) >= 13 && getSize(number) <= 16) &&
-       // (prefixMatched(number, 4) || prefixMatched(number, 5) ||
-       // prefixMatched(number, 37) || prefixMatched(number, 6)) &&
+        (getSize(number) >= 13 && getSize(number) <= 16) &&
+        (prefixMatched(number, 4) || prefixMatched(number, 5) ||
+        prefixMatched(number, 37) || prefixMatched(number, 6)) &&
         ((sumOfDoubleEvenPlace(number) + sumOfOddPlace(number)) % 10 == 0);
 
     return valid;
